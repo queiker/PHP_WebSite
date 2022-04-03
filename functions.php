@@ -24,31 +24,47 @@ function footer(){
 
 function login(){
     print("
-
-    <form method=\"POST\" action=\"register.php\">
-    <input type=\"text\" name=\"login\" placeholder=\"Login\"><br>
-    <input type=\"password\" name=\"Hasło\"><br>
+    <center>
+    <form method=\"POST\" action=\"login.php\">
+    <input type=\"text\" name=\"username\" placeholder=\"Login\"><br>
+    <input type=\"password\" name=\"password\"><br>
     <input type=\"submit\" name=\"submit\" value=\"Wyślij\"><br>
     </form>
+    </center>
     
     ");
     
 }
 
+
+
+
+
 function menu(){
-    print("Menu <ul>");
+    print("Menu <br>");
+
+    menu_item_begin();
     menu_item("pierwszy punikt");
 
     menu_item("drugi punkt punikt");
     menu_item("trzeci punkt punikt");
 
+    menu_item_end();
 
-    print("</ul>");
+    
 }
 
 function menu_item($item_name){
     $string = "<li>". $item_name ."</li>";
     print($string);
+}
+
+function menu_item_begin(){
+    print("<ul>");
+}
+
+function menu_item_end(){
+    print("</ul>");
 }
 
 
