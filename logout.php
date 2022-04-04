@@ -1,4 +1,7 @@
 <?php
+include("functions.php");
+bootstrap();
+
 session_start();
 
     $_SESSION['logged'] = 0;

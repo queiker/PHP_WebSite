@@ -3,23 +3,27 @@
 function head(){
 
     print("<br>");
-    print("<hr>");
-    print("<center>");
-    print("Header");
-    print("</center>");
-    print("<hr>");
-    print("<br>");
+    
+    
+    print("<div style=\"color:brown;text-align:center;font-size: 40px;\"> Witaj! </div>
+    <hr>
+    <br>
+    ");
 }
 
 function footer(){
 
-    print("<br>");
-    print("<hr>");
-    print("<center>");
-    print("Footer");
-    print("</center>");
-    print("<hr>");
-    print("<br>");
+    print("
+    <br>
+    <hr>
+    <br>
+    ");
+    
+    print("<div style=\"color:orange;text-align:right\">Designed by Grzegorz Płonka 2022<div>");
+    
+    print("
+    </br>
+    ");
 }
 
 function login(){
@@ -38,34 +42,19 @@ function login(){
 
 
 
+function you_are_logged_in()
+{
+print("<div style=\"color:orange;text-align:right;\" > Jesteś zalogowany&nbsp&nbsp<a href=\"/logout.php\">WYLOGUJ</a> </div>");
 
+}
 
 function menu(){
-    print("Menu <br>");
-
-    menu_item_begin();
-    menu_item("pierwszy punikt");
-
-    menu_item("drugi punkt punikt");
-    menu_item("trzeci punkt punikt");
-
-    menu_item_end();
-
-    
+    print("<a href=\"/index.php\">Strona główna</a><br>");
+    print("<a href=\"/passworded.php\">Pasworded page</a><br>");
+   
 }
 
-function menu_item($item_name){
-    $string = "<li>". $item_name ."</li>";
-    print($string);
-}
 
-function menu_item_begin(){
-    print("<ul>");
-}
-
-function menu_item_end(){
-    print("</ul>");
-}
 
 
 function website(){
@@ -75,7 +64,7 @@ function website(){
 
 
 function body(){
-    print("<table >");
+    print("<table>");
     print("<tr><td>");
     
     menu();
@@ -88,14 +77,16 @@ function body(){
     print("</td></tr>");
     
     print("</table>");
-    
-    
    
 }
+
+
 
 function bootstrap (){
     print("<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>");
+    
+
 }
 
 
