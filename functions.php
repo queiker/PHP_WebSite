@@ -50,6 +50,9 @@ print("<div style=\"color:orange;text-align:right;\" > Jesteś zalogowany&nbsp&n
 
 function menu(){
     print("<a href=\"/index.php\">Strona główna</a><br>");
+    
+    print("<a href=\"/nbp.php\">Exchange rates</a><br>");
+
     print("<a href=\"/passworded.php\">Pasworded page</a><br>");
    
 }

@@ -1,22 +1,10 @@
 <?php 
-/**************************************************
- *                  Kursy walut                   *
- **************************************************
- * Ostatnia modyfikacja: 18.01.2013 (wersja 5.0)  *
- * Autor: Jacek Kowalski (http://jacekk.info)     *
- *                                                *
- * Strona WWW: http://jacekk.info/scripts/kursy   *
- *                                                *
- * Utwór rozprowadzany na licencji                *
- * http://creativecommons.org/licenses/by-nc/2.5/ *
- **************************************************/
+include("functions.php");
+include("auth.inc.php");
+bootstrap();
+you_are_logged_in();
+head();
 
-/* Kodowanie znaków UTF-8 */
-
-/****************************************************
- * UWAGA! Po każdej zmianie tego pliku, należy      *
- * usunąć plik kursy_cache.txt z głównego folderu!  *
- ****************************************************/
 
 function convert($text) {
     // Zmień na żądane kodowanie znaków - puste pozostawia UTF-8
@@ -117,6 +105,18 @@ class kursy {
     }
 }
 
+
+
+print("<table>");
+    print("<tr><td>");
+    
+    menu();
+    
+    print("</td><td>");
+
+    
+
+
 try {
     // adres do kursów, plik do cache'owania, poprzednia aktualizacja, najbliższa aktualizacja
     $kursy = new kursy('http://nbp.pl/kursy/xml/LastA.xml', 'kursy_cache.txt', '12:16 -1 day', '12:16');
@@ -130,4 +130,26 @@ catch(Exception $e) {
     // Aby pokazać błąd, odkomentuj poniższą linię:
     // var_dump($e);
 }
+
+
+
+    print("</td></tr>");
+    
+    print("</table>");
+
+
+footer();
+
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
