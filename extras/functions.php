@@ -3,9 +3,11 @@
 function head(){
 
     print("<br>");
+    print("<style>
+    body {background-color: powderblue;}
+    </style>");
     
-    
-    print("<div style=\"color:brown;text-align:center;font-size: 40px;\"> Witaj! </div>
+    print("<div style=\"color:black;text-align:center;font-size: 40px;\"> Tradecomp business </div>
     <hr>
     <br>
     ");
@@ -19,7 +21,7 @@ function footer(){
     <br>
     ");
     
-    print("<div style=\"color:orange;text-align:right\">Designed by Grzegorz Płonka 2022<div>");
+    print("<div style=\"color:black;text-align:right\">Designed by Grzegorz Płonka 2022<div>");
     
     print("
     </br>
@@ -44,44 +46,23 @@ function login(){
 
 function you_are_logged_in()
 {
-print("<div style=\"color:orange;text-align:right;\" > Jesteś zalogowany&nbsp&nbsp<a href=\"/logout.php\">WYLOGUJ</a> </div>");
+print("<div style=\"color:black;text-align:right;\" > Jesteś zalogowany&nbsp&nbsp<a href=\"/logout.php\">WYLOGUJ</a> </div>");
 
 }
 
 function menu(){
-    print("<a href=\"/index.php\">Strona główna</a><br>");
+    print("<a href=\"/extras/index.php\">Strona główna</a><br>");
     
-    print("<a href=\"/nbp.php\">Exchange rates</a><br>");
+    print("<a href=\"/extras/nbp.php\">Exchange rates</a><br>");
 
-    print("<a href=\"/passworded.php\">Pasworded page</a><br>");
+    
+
+    print("<a href=\"/extras/read_db.php\">Odczyt bazy danych</a><br>");
+
+    
    
 }
 
-
-
-
-function website(){
-    print("Website");
-}
-
-
-
-function body(){
-    print("<table>");
-    print("<tr><td>");
-    
-    menu();
-    
-    print("</td><td>");
-
-    
-    website();
-
-    print("</td></tr>");
-    
-    print("</table>");
-   
-}
 
 
 
